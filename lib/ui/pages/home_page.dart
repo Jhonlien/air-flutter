@@ -88,10 +88,60 @@ class _HomePageState extends State<HomePage> {
         )
       );
     }
+
+    Widget newDestinations() {
+      return Container(
+        margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+                "New this Year",
+              style: blackTextStyle.copyWith(
+                fontWeight: semibold,
+                fontSize: 18
+              ),
+            ),
+            DestinationTile(
+              imageUrl: "assets/image_destination_1.png",
+              name: "Danau Ciliwung",
+              city: "Singaraja",
+              rating: 1.0,
+            ),
+            DestinationTile(
+              imageUrl: "assets/image_destination_2.png",
+              name: "Danau Ciliwung",
+              city: "Singaraja",
+              rating: 1.0,
+            ),
+            DestinationTile(
+              imageUrl: "assets/image_destination_3.png",
+              name: "Danau Ciliwung",
+              city: "Singaraja",
+              rating: 1.0,
+            ),
+            DestinationTile(
+              imageUrl: "assets/image_destination_4.png",
+              name: "Danau Ciliwung",
+              city: "Singaraja",
+              rating: 1.0,
+            ),
+            DestinationTile(
+              imageUrl: "assets/image_destination_5.png",
+              name: "Danau Ciliwung",
+              city: "Singaraja",
+              rating: 1.0,
+            )
+          ],
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
-        popularDestinations()
+        popularDestinations(),
+        newDestinations()
       ],
     );
   }
